@@ -1,0 +1,17 @@
+{
+  "project1": {
+    "uid": "",
+    "status": "Completed",
+    "patternId": "pattern1"
+  },
+  "project2": {
+    "uid": "",
+    "status": "Saved for Later",
+    "patternId": "pattern3"
+  },
+  "project3": {
+    "uid": "",
+    "status": "In Progress",
+    "patternId": "pattern2"
+  }
+}

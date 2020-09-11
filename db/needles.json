@@ -1,0 +1,122 @@
+{
+  "needle1": {
+    "size": 7,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle2": {
+    "size": 8,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle3": {
+    "size": 9,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle4": {
+    "size": 10,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle5": {
+    "size": 11,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle6": {
+    "size": 13,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle7": {
+    "size": 8,
+    "type": "double-pointed",
+    "length": "7 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle8": {
+    "size": 10,
+    "type": "double-pointed",
+    "length": "7 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle9": {
+    "size": 11,
+    "type": "double-pointed",
+    "length": "7 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle10": {
+    "size": 6,
+    "type": "circular",
+    "length": "16 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle11": {
+    "size": 8,
+    "type": "circular",
+    "length": "16 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle12": {
+    "size": 6,
+    "type": "circular",
+    "length": "16 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle13": {
+    "size": 19,
+    "type": "circular",
+    "length": "29 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": "bamboo"
+  },
+  "needle14": {
+    "size": 10.5,
+    "type": "circular",
+    "length": "29 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle15": {
+    "size": 15,
+    "type": "circular",
+    "length": "16 inches",
+    "uid": "",
+    "isOwned": true,
+    "notes": ""
+  }
+}

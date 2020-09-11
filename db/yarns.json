@@ -1,0 +1,56 @@
+{
+  "yarn1": {
+    "color": "burgundy",
+    "type": "worsted",
+    "weight": 445,
+    "uid": "",
+    "isOwned": true,
+    "material": "acrylic",
+    "notes": "two different dye lots, but color is close enough"
+  },
+  "yarn2": {
+    "color": "pale rose",
+    "type": "worsted",
+    "weight": 100,
+    "uid": "",
+    "isOwned": true,
+    "material": "acrylic",
+    "notes": "recommends size 8 needles"
+  },
+  "yarn3": {
+    "color": "teal",
+    "type": "bulky",
+    "weight": 175,
+    "uid": "",
+    "isOwned": true,
+    "material": "acrylic",
+    "notes": "recommends size 10 needles, very soft"
+  },
+  "yarn4": {
+    "color": "moss heather",
+    "type": "worsted",
+    "weight": 100,
+    "uid": "",
+    "isOwned": true,
+    "material": "wool",
+    "notes": "recommends size 7 needles, hand wash"
+  },
+  "yarn5": {
+    "color": "black",
+    "type": "light",
+    "weight": 100,
+    "uid": "",
+    "isOwned": true,
+    "material": "wool",
+    "notes": "recommends size 6 needles, yarn from New Zealand!"
+  },
+  "yarn6": {
+    "color": "orange",
+    "type": "worsted",
+    "weight": 138,
+    "uid": "",
+    "isOwned": true,
+    "material": "acrylic",
+    "notes": "no label, why do I even have this?"
+  }
+}
