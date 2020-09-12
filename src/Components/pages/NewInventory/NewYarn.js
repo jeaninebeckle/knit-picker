@@ -4,7 +4,7 @@ class NewYarn extends React.Component {
   render() {
     return (
       <div className="NewYarn">
-        <h1>NewYarn</h1>
+        <h1>Woohoo! New Yarn!</h1>
       </div>
     );
   }

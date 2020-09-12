@@ -14,8 +14,11 @@ const getSingleYarns = (yarnId) => axios.get(`${baseUrl}/yarns/${yarnId}.json`);
 
 const deleteYarns = (yarnId) => axios.delete(`${baseUrl}/yarns/${yarnId}.json`);
 
+const createYarns = (newYarn) => axios.post(`${baseUrl}/yarns.json`, newYarn);
+
 export default {
   getYarnsByUid,
   getSingleYarns,
   deleteYarns,
+  createYarns,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NeedleCards from '../../shared/NeedleCards/NeedleCards';
 import YarnCards from '../../shared/YarnCards/YarnCards';
 import authData from '../../../helpers/data/authData';
@@ -56,12 +56,14 @@ class Inventory extends React.Component {
         <h1>Inventory</h1>
         <div className="needles">
         <h2>Needles</h2>
+        <Link to="/new/needles" className="btn btn-light m-1">Add New Needles</Link>
         <div className="card-columns m-3">
           { needleCards }
         </div>
         </div>
         <div className="yarns">
         <h2>Yarns</h2>
+        <Link to="/new/yarn" className="btn btn-light m-1">Add New Yarn</Link>
         <div className="card-columns m-3">
           { yarnCards }
         </div>
