@@ -4,7 +4,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 class MyNavbar extends React.Component {
-
   logoutClickEvent = (e) => {
     e.preventDefault();
     firebase.auth().signOut();
