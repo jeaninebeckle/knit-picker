@@ -16,9 +16,12 @@ const deleteNeedles = (needleId) => axios.delete(`${baseUrl}/needles/${needleId}
 
 const createNeedles = (newNeedles) => axios.post(`${baseUrl}/needles.json`, newNeedles);
 
+const updateNeedles = (needleId, updatedNeedle) => axios.put(`${baseUrl}/needles/${needleId}.json`, updatedNeedle);
+
 export default {
   getNeedlesByUid,
   getSingleNeedles,
   deleteNeedles,
   createNeedles,
+  updateNeedles,
 };

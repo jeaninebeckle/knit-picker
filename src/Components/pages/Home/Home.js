@@ -5,7 +5,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <h1>Welcome To Knit Picker!</h1>
-        <h3>🧶 a place to organize all of your knitting needs 🧶</h3>
+        <h3>a place to organize all of your knitting needs</h3>
       </div>
     );
   }

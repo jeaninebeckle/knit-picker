@@ -6,6 +6,7 @@ import needlesData from '../../../helpers/data/needlesData';
 class NewNeedle extends React.Component {
   state = {
     size: '',
+    type: '',
     length: '',
     isOwned: true,
     notes: '',
@@ -13,7 +14,7 @@ class NewNeedle extends React.Component {
 
   changeSizeEvent = (e) => {
     e.preventDefault();
-    this.setState({ size: e.target.value });
+    this.setState({ size: parseFloat(e.target.value) });
   }
 
   changeTypeEvent = (e) => {

@@ -16,9 +16,12 @@ const deleteYarns = (yarnId) => axios.delete(`${baseUrl}/yarns/${yarnId}.json`);
 
 const createYarns = (newYarn) => axios.post(`${baseUrl}/yarns.json`, newYarn);
 
+const updateYarns = (yarnId, updatedYarn) => axios.put(`${baseUrl}/yarns/${yarnId}.json`, updatedYarn);
+
 export default {
   getYarnsByUid,
   getSingleYarns,
   deleteYarns,
   createYarns,
+  updateYarns,
 };
