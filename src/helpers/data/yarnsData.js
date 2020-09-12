@@ -10,9 +10,12 @@ const getYarnsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-const getSingleYarns = (yarnId) => axios.get(`${baseUrl}/Yarns/${yarnId}.json`);
+const getSingleYarns = (yarnId) => axios.get(`${baseUrl}/yarns/${yarnId}.json`);
+
+const deleteYarns = (yarnId) => axios.delete(`${baseUrl}/yarns/${yarnId}.json`);
 
 export default {
   getYarnsByUid,
   getSingleYarns,
+  deleteYarns,
 };
