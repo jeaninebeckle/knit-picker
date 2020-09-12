@@ -61,7 +61,7 @@ class Inventory extends React.Component {
           { needleCards }
         </div>
         </div>
-        <div className="yarns">
+        <div id="invYarn" className="yarns">
         <h2>Yarns</h2>
         <Link to="/new/yarn" className="btn btn-light m-1">Add New Yarn</Link>
         <div className="card-columns m-3">

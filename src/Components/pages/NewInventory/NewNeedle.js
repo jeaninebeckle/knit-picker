@@ -52,48 +52,49 @@ class NewNeedle extends React.Component {
       length,
       notes,
     } = this.state;
+
     return (
       <div className="NewNeedle">
         <h2>Woohoo! New Needles!</h2>
         <form className="col-6 offset-3">
           <div className="form-group">
-            <label htmlFor=""></label>
+            <label htmlFor="">Size</label>
               <input
                 type="text"
                 className="form-control"
                 id="needleSize"
-                placeholder="Enter Size"
+                placeholder="10.5"
                 value={size}
                 onChange={this.changeSizeEvent}
                 />
-            <label htmlFor=""></label>
+            <label htmlFor="">Type</label>
               <input
                 type="text"
                 className="form-control"
                 id="needleType"
-                placeholder="Enter Type"
+                placeholder="circular"
                 value={type}
                 onChange={this.changeTypeEvent}
                 />
-            <label htmlFor=""></label>
+            <label htmlFor="">Length</label>
               <input
                 type="text"
                 className="form-control"
                 id="needleLength"
-                placeholder="Enter Length (include inches or cm)"
+                placeholder="16 inches"
                 value={length}
                 onChange={this.changeLengthEvent}
                 />
-            <label htmlFor=""></label>
+            <label htmlFor="">Notes</label>
               <input
                 type="text"
                 className="form-control"
                 id="needleSize"
-                placeholder="Enter Notes"
+                placeholder="Aluminum, made by Boye"
                 value={notes}
                 onChange={this.changeNotesEvent}
                 />
-          </div>
+            </div>
           <button className="btn btn-warning" onClick={this.saveNeedles}>Save Needles</button>
         </form>
       </div>
