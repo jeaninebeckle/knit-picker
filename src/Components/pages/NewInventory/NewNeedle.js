@@ -14,7 +14,7 @@ class NewNeedle extends React.Component {
 
   changeSizeEvent = (e) => {
     e.preventDefault();
-    this.setState({ size: parseFloat(e.target.value) });
+    this.setState({ size: e.target.value });
   }
 
   changeTypeEvent = (e) => {
