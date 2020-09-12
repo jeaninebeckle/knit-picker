@@ -12,7 +12,10 @@ const getNeedlesByUid = (uid) => new Promise((resolve, reject) => {
 
 const getSingleNeedles = (needleId) => axios.get(`${baseUrl}/needles/${needleId}.json`);
 
+const deleteNeedles = (needleId) => axios.delete(`${baseUrl}/needles/${needleId}.json`);
+
 export default {
   getNeedlesByUid,
   getSingleNeedles,
+  deleteNeedles,
 };

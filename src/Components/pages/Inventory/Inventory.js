@@ -29,11 +29,27 @@ class Inventory extends React.Component {
     this.getYarns();
   }
 
+  deleteNeedles = (needleId) => {
+    needlesData.deleteNeedles(needleId)
+      .then(() => {
+        this.getNeedles();
+      })
+      .catch((err) => console.error('delete needles failed', err));
+  }
+
+  deleteYarns = (yarnId) => {
+    yarnsData.deleteYarns(yarnId)
+      .then(() => {
+        this.getYarns();
+      })
+      .catch((err) => console.error('delete yarn failed', err));
+  }
+
   render() {
     const { needles, yarns } = this.state;
 
-    const needleCards = needles.map((needle) => <NeedleCards key={needle.id} needle={needle}/>);
-    const yarnCards = yarns.map((yarn) => <YarnCards key={yarn.id} yarn={yarn}/>);
+    const needleCards = needles.map((needle) => <NeedleCards key={needle.id} needle={needle} deleteNeedles={this.deleteNeedles}/>);
+    const yarnCards = yarns.map((yarn) => <YarnCards key={yarn.id} yarn={yarn} deleteYarns={this.deleteYarns}/>);
 
     return (
       <div className="Inventory">
