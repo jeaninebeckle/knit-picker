@@ -24,7 +24,7 @@ class EditNeedle extends React.Component {
   changeSizeEvent = (e) => {
     e.preventDefault();
     const { needle } = this.state;
-    needle.size = parseFloat(e.target.value);
+    needle.size = e.target.value;
     this.setState({ needle });
   }
 

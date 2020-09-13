@@ -73,8 +73,8 @@ class App extends React.Component {
                <PrivateRoute path="/projects" component={Projects} authed={authed} />
                <PrivateRoute path="/gallery" component={Gallery} authed={authed} />
                <PrivateRoute path="/patterns" component={Patterns} authed={authed} />
-               <PrivateRoute path="/edit/:needleId" component={EditNeedle} authed={authed} />
-               <PrivateRoute path="/edit/:yarnId" component={EditYarn} authed={authed} />
+               <PrivateRoute path="/needle/:needleId/edit" component={EditNeedle} authed={authed} />
+               <PrivateRoute path="/yarn/:yarnId/edit" component={EditYarn} authed={authed} />
                <PrivateRoute path="/projects/:projectId" component={SingleProject} authed={authed} />
                <PublicRoute path="/auth" component={Auth} authed={authed} />
                <Redirect from="*" to="/home"/>

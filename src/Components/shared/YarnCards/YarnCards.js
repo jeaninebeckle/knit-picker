@@ -30,7 +30,7 @@ class YarnCards extends React.Component {
             <li className="list-group-item">Notes: {yarn.notes}</li>
           </ul>
           <button className="btn btn-dark m-1" onClick={this.deleteYarnsEvent}>Delete</button>
-          <Link to={`/edit/${yarn.id}`} className="btn btn-dark m-1">Edit</Link>
+          <Link to={`/yarn/${yarn.id}/edit`} className="btn btn-dark m-1">Edit</Link>
         </div>
     );
   }

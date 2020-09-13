@@ -29,7 +29,7 @@ class NeedleCards extends React.Component {
             <li className="list-group-item">Notes: {needle.notes}</li>
           </ul>
           <button className="btn btn-dark m-1" onClick={this.deleteNeedlesEvent}>Delete</button>
-          <Link to={`/edit/${needle.id}`} className="btn btn-dark m-1">Edit</Link>
+          <Link to={`/needle/${needle.id}/edit`} className="btn btn-dark m-1">Edit</Link>
         </div>
     );
   }
