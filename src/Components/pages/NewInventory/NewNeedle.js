@@ -6,6 +6,7 @@ import needlesData from '../../../helpers/data/needlesData';
 class NewNeedle extends React.Component {
   state = {
     size: '',
+    type: '',
     length: '',
     isOwned: true,
     notes: '',

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import yarnShape from '../../../helpers/props/yarnShape';
 
@@ -29,7 +29,8 @@ class YarnCards extends React.Component {
             <li className="list-group-item">Material: {yarn.material}</li>
             <li className="list-group-item">Notes: {yarn.notes}</li>
           </ul>
-          <button onClick={this.deleteYarnsEvent}>Delete</button>
+          <button className="btn btn-dark m-1" onClick={this.deleteYarnsEvent}>Delete</button>
+          <Link to={`/yarn/${yarn.id}/edit`} className="btn btn-dark m-1">Edit</Link>
         </div>
     );
   }
