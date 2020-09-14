@@ -12,7 +12,10 @@ const getPatternsByUid = (uid) => new Promise((resolve, reject) => {
 
 const getSinglePatterns = (patternId) => axios.get(`${baseUrl}/patterns/${patternId}.json`);
 
+const deletePatterns = (patternId) => axios.delete(`${baseUrl}/patterns/${patternId}.json`);
+
 export default {
   getPatternsByUid,
   getSinglePatterns,
+  deletePatterns,
 };
