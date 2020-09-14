@@ -90,7 +90,7 @@ class NewNeedle extends React.Component {
               <input
                 type="text"
                 className="form-control"
-                id="needleSize"
+                id="needleNotes"
                 placeholder="Aluminum, made by Boye"
                 value={notes}
                 onChange={this.changeNotesEvent}

@@ -19,6 +19,8 @@ import EditYarn from '../Components/pages/EditInventory/EditYarn';
 import Gallery from '../Components/pages/Gallery/Gallery';
 import Patterns from '../Components/pages/Patterns/Patterns';
 import Projects from '../Components/pages/Projects/Projects';
+import NewPatterns from '../Components/pages/NewPatterns/NewPatterns';
+
 import SingleProject from '../Components/pages/SingleProject/SingleProject';
 
 import './App.scss';
@@ -69,6 +71,7 @@ class App extends React.Component {
                <PrivateRoute path="/home" component={Home} authed={authed}/>
                <PrivateRoute path="/new/needles" component={NewNeedle} authed={authed}/>
                <PrivateRoute path="/new/yarn" component={NewYarn} authed={authed}/>
+               <PrivateRoute path="/new/patterns" component={NewPatterns} authed={authed}/>
                <PrivateRoute path="/inventory" component={Inventory} authed={authed} />
                <PrivateRoute path="/projects" component={Projects} authed={authed} />
                <PrivateRoute path="/gallery" component={Gallery} authed={authed} />
