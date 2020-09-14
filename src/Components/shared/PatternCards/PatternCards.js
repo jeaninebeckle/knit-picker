@@ -24,7 +24,6 @@ class PatternCards extends React.Component {
       <img className="card-img-top" src={pattern.imageUrl} alt="Card cap" />
       <div className="card-body">
         <h5 className="card-title">{pattern.patternName}</h5>
-        <p className="card-text">Item: {pattern.item}</p>
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Needle size: {pattern.needleSize}</li>
