@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 import patternShape from '../../../helpers/props/patternShape';
+import './PatternCards.scss';
 
 class PatternCards extends React.Component {
   static propTypes = {
@@ -13,19 +14,23 @@ class PatternCards extends React.Component {
 
     return (
       <div class="card">
-      <img class="card-img-top" src="..." alt="Card cap" />
+      <img class="card-img-top" src={pattern.imageUrl} alt="Card cap" />
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">{pattern.patternName}</h5>
+        <p class="card-text">Item: {pattern.item}</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">Needle size: {pattern.needleSize}</li>
+        <li class="list-group-item">Needle type: {pattern.needleType}</li>
+        <li class="list-group-item">Needle length: {pattern.needleLength}</li>
+        <li class="list-group-item">Yarn color: {pattern.yarnColor}</li>
+        <li class="list-group-item">Yarn type: {pattern.yarnType}</li>
+        <li class="list-group-item">Amount of yarn: {pattern.yarnWeight} grams</li>
+        <li class="list-group-item">Notes: {pattern.notes}</li>
       </ul>
       <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        {/* <button className="btn btn-dark m-1" onClick={this.deletePatternEvent}>Delete</button> */}
+        <a href={pattern.patternUrl}>Take me to the pattern!</a>
       </div>
     </div>
     );

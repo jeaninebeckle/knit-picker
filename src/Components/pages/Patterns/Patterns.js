@@ -27,7 +27,9 @@ class Patterns extends React.Component {
     return (
       <div className="Patterns">
         <h1>Patterns</h1>
-        { patternCards }
+        <div className="card-columns m-3">
+          { patternCards }
+        </div>
       </div>
     );
   }
