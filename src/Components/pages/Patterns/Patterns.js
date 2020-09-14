@@ -19,10 +19,18 @@ class Patterns extends React.Component {
     this.getPatterns();
   }
 
+  deletePatterns = (patternId) => {
+    patternsData.deletePatterns(patternId)
+      .then(() => {
+        this.getPatterns();
+      })
+      .catch((err) => console.error('delete patterns failed', err));
+  }
+
   render() {
     const { patterns } = this.state;
 
-    const patternCards = patterns.map((pattern) => <PatternCards key={pattern.id} pattern={pattern} />);
+    const patternCards = patterns.map((pattern) => <PatternCards key={pattern.id} pattern={pattern} deletePatterns={this.deletePatterns}/>);
 
     return (
       <div className="Patterns">
