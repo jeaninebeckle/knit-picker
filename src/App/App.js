@@ -20,7 +20,6 @@ import Gallery from '../Components/pages/Gallery/Gallery';
 import Patterns from '../Components/pages/Patterns/Patterns';
 import Projects from '../Components/pages/Projects/Projects';
 import NewPatterns from '../Components/pages/NewPatterns/NewPatterns';
-
 import SingleProject from '../Components/pages/SingleProject/SingleProject';
 
 import './App.scss';
@@ -78,7 +77,7 @@ class App extends React.Component {
                <PrivateRoute path="/patterns" component={Patterns} authed={authed} />
                <PrivateRoute path="/needle/:needleId/edit" component={EditNeedle} authed={authed} />
                <PrivateRoute path="/yarn/:yarnId/edit" component={EditYarn} authed={authed} />
-               <PrivateRoute path="/projects/:projectId" component={SingleProject} authed={authed} />
+               <PrivateRoute path="/single/:projectId" component={SingleProject} authed={authed} />
                <PublicRoute path="/auth" component={Auth} authed={authed} />
                <Redirect from="*" to="/home"/>
              </Switch>
