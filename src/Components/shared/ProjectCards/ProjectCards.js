@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SavedDD from '../Dropdown/SavedDD';
+import CompleteDD from '../Dropdown/CompleteDD';
+import InProgressDD from '../Dropdown/InProgressDD';
+import patternsData from '../../../helpers/data/patternsData';
 import projectShape from '../../../helpers/props/projectShape';
 
 class ProjectCards extends React.Component {
@@ -7,22 +11,31 @@ class ProjectCards extends React.Component {
     project: projectShape.projectShape,
   }
 
+  state = {
+    pattern: {},
+  }
+
+  componentDidMount() {
+    const { project } = this.props;
+    patternsData.getSinglePatterns(project.patternId)
+      .then((res) => {
+        const pattern = res.data;
+        this.setState({ pattern });
+      })
+      .catch((err) => console.error('get patterns failed', err));
+  }
+
   render() {
+    const { pattern } = this.state;
     const { project } = this.props;
 
     return (
       <div className="card">
-        <img className="card-img-top" src="..." alt="Card cap" />
+        <img className="card-img-top" src={pattern.imageUrl} alt="Card cap" />
         <div className="card-body">
-          <h5 className="card-title">Project pattern name placeholder</h5>
+          <h5 className="card-title">{pattern.patternName}</h5>
           <div>
-          <label htmlFor="status">Select a status:</label>
-            <select name="status" id="status">
-            <option value="completed">{project.status}</option>
-              <option value="completed">Completed</option>
-              <option value="inProgress">In Progress</option>
-              <option value="later">Saved for Later</option>
-            </select>
+            <p>{project.status}</p>
           </div>
         </div>
         <Link to={`/single/${project.id}`} className="btn btn-dark m-1">See Full Project Details</Link>
