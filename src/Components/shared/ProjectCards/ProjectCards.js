@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SavedDD from '../Dropdown/SavedDD';
-import CompleteDD from '../Dropdown/CompleteDD';
-import InProgressDD from '../Dropdown/InProgressDD';
 import patternsData from '../../../helpers/data/patternsData';
 import projectShape from '../../../helpers/props/projectShape';
 
@@ -35,7 +32,12 @@ class ProjectCards extends React.Component {
         <div className="card-body">
           <h5 className="card-title">{pattern.patternName}</h5>
           <div>
-            <p>{project.status}</p>
+          <select>
+            <option selected value="status">{project.status}</option>
+            <option value="Saved for Later">Saved for Later</option>
+            <option value="Completed">Completed</option>
+            <option value="In Progress">In Progress</option>
+          </select>
           </div>
         </div>
         <Link to={`/single/${project.id}`} className="btn btn-dark m-1">See Full Project Details</Link>
