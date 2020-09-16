@@ -1,0 +1,25 @@
+.img-continue, .img-start {
+  height: 300px;
+  width: 450px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+.column h1 {
+  color: white;
+  margin: 5px;
+}
+
+.img-continue:hover, .img-start:hover {
+  background-color: black;
+  opacity: .75;
+  transition: .4s ease;
+}
