@@ -12,6 +12,7 @@ import {
 } from 'reactstrap';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import './MyNavbar.scss';
 
 class MyNavbar extends React.Component {
   static propTypes = {
@@ -40,7 +41,7 @@ class MyNavbar extends React.Component {
 
       if (authed) {
         return (
-          <Nav className="ml-auto" navbar>
+          <Nav className="ml-auto navbar" navbar>
             <NavItem>
               <NavLink tag={RRNavLink} to='/inventory'>Inventory</NavLink>
             </NavItem>

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import patternShape from '../../../helpers/props/patternShape';
 import './PatternCards.scss';
@@ -36,6 +36,7 @@ class PatternCards extends React.Component {
         <li className="list-group-item"><a href={pattern.patternUrl}>Take me to the pattern!</a></li>
       </ul>
       <div className="card-body">
+          <Link to={`/create/${pattern.id}`} className="btn btn-dark m-1">Start Knitting</Link>
           <button className="btn btn-dark m-1" onClick={this.deletePatternsEvent}>Delete Pattern</button>
         </div>
     </div>
