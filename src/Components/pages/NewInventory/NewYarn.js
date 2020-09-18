@@ -25,7 +25,11 @@ class NewYarn extends React.Component {
 
   changeWeightEvent = (e) => {
     e.preventDefault();
-    this.setState({ weight: e.target.value });
+    let weight = parseFloat(e.target.value);
+    if (isNaN(weight)) {
+      weight = '';
+    }
+    this.setState({ weight });
   }
 
   changeMaterialEvent = (e) => {
