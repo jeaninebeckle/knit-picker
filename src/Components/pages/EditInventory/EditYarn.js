@@ -39,7 +39,11 @@ class EditYarn extends React.Component {
   changeWeightEvent = (e) => {
     e.preventDefault();
     const { yarn } = this.state;
-    yarn.weight = e.target.value;
+    let weight = parseFloat(e.target.value);
+    if (isNaN(weight)) {
+      weight = '';
+    }
+    yarn.weight = weight;
     this.setState({ yarn });
   }
 
