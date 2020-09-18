@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import _ from 'underscore';
 import patternsData from '../../../helpers/data/patternsData';
+import projectsData from '../../../helpers/data/projectsData';
 import patternShape from '../../../helpers/props/patternShape';
 import ProjPatternCards from '../../shared/PatternCards/ProjPatternCards';
 import ProjYarnCards from '../../shared/YarnCards/ProjYarnCards';
@@ -50,6 +52,22 @@ class CreateProject extends React.Component {
     this.getYarns();
   }
 
+  saveProject = (e) => {
+    e.preventDefault();
+
+    const newProject = {
+      patternId: this.props.match.params.patternId,
+      status: 'In Progress',
+      uid: authData.getUid(),
+    };
+
+    projectsData.createProject(newProject)
+      .then(() => {
+        this.props.history.push('/projects');
+      })
+      .catch((err) => console.error('new project not happening', err));
+  }
+
   render() {
     const { needles, yarns, pattern } = this.state;
 
@@ -66,8 +84,8 @@ class CreateProject extends React.Component {
         </div>
         <div className="buttons col-md">
         <h3>Links</h3>
-          <Link to={'/projects'} className="btn btn-light">Let's Get Started!</Link>
-          <a className="btn btn-light" href="https://www.amazon.com" target="blank"><i class="fab fa-amazon"></i> Get Supplies</a>
+          <button className="btn btn-light" onClick={this.saveProject}>Let's Get Started!</button>
+          <a className="btn btn-light" href="https://www.amazon.com" target="blank"><i className="fab fa-amazon"></i> Get Supplies</a>
           <Link to={'/patterns'} className="btn btn-light">Return to Patterns</Link>
         </div>
         <div className="yarn col-md">
