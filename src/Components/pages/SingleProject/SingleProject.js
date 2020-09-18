@@ -40,7 +40,6 @@ class SingleProject extends React.Component {
 
   render() {
     const { project, pattern } = this.state;
-    console.warn(project);
 
     return (
       <div className="SingleProject">

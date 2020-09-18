@@ -1,19 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import patternShape from '../../../helpers/props/patternShape';
 import './PatternCards.scss';
 
-class PatternCards extends React.Component {
+class ProjPatternCards extends React.Component {
   static propTypes = {
     pattern: patternShape.patternShape,
-    deletePatterns: PropTypes.func.isRequired,
-  }
-
-  deletePatternsEvent = (e) => {
-    e.preventDefault();
-    const { pattern, deletePatterns } = this.props;
-    deletePatterns(pattern.id);
   }
 
   render() {
@@ -33,15 +24,10 @@ class PatternCards extends React.Component {
         <li className="list-group-item">Yarn type: {pattern.yarnType}</li>
         <li className="list-group-item">Amount of yarn: {pattern.yarnWeight} grams</li>
         <li className="list-group-item">Notes: {pattern.notes}</li>
-        <li className="list-group-item"><a href={pattern.patternUrl}>Take me to the pattern!</a></li>
       </ul>
-      <div className="card-body">
-          <Link to={`/create/${pattern.id}`} className="btn btn-dark m-1">Start Knitting</Link>
-          <button className="btn btn-dark m-1" onClick={this.deletePatternsEvent}>Delete Pattern</button>
-        </div>
     </div>
     );
   }
 }
 
-export default PatternCards;
+export default ProjPatternCards;
