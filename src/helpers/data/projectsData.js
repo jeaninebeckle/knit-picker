@@ -16,10 +16,13 @@ const getProjectsByPatternId = (patternId) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-const getSingleProjects = (projectId) => axios.get(`${baseUrl}/projects/${projectId}.json`);
+const getSingleProject = (projectId) => axios.get(`${baseUrl}/projects/${projectId}.json`);
+
+const createProject = (newProject) => axios.post(`${baseUrl}/projects.json`, newProject);
 
 export default {
   getProjectsByUid,
-  getSingleProjects,
+  getSingleProject,
   getProjectsByPatternId,
+  createProject,
 };

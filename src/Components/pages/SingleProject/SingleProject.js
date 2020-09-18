@@ -17,7 +17,7 @@ class SingleProject extends React.Component {
 
   getProject = () => {
     const { projectId } = this.props.match.params;
-    projectsData.getSingleProjects(projectId)
+    projectsData.getSingleProject(projectId)
       .then((res) => {
         this.setState({ project: res.data });
         this.getPattern(res.data.patternId);
