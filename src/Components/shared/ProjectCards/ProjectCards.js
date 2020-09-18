@@ -22,9 +22,17 @@ class ProjectCards extends React.Component {
       .catch((err) => console.error('get patterns failed', err));
   }
 
+  statusChangeEvent = (e) => {
+    e.preventDefault();
+    this.setState({ status: e.target.value });
+  }
+
   render() {
     const { pattern } = this.state;
     const { project } = this.props;
+
+    const statuses = ['Saved for Later', 'Completed', 'In Progress'];
+    const dropdown = statuses.map((status) => <option value={status}>{status}</option>);
 
     return (
       <div className="card">
@@ -32,11 +40,8 @@ class ProjectCards extends React.Component {
         <div className="card-body">
           <h5 className="card-title">{pattern.patternName}</h5>
           <div>
-          <select>
-            <option selected value="status">{project.status}</option>
-            <option value="Saved for Later">Saved for Later</option>
-            <option value="Completed">Completed</option>
-            <option value="In Progress">In Progress</option>
+          <select value={project.status} onChange={this.statusChangeEvent}>
+              {dropdown}
           </select>
           </div>
         </div>
