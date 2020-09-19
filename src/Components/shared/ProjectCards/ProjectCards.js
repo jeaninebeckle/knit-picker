@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import patternsData from '../../../helpers/data/patternsData';
 import projectShape from '../../../helpers/props/projectShape';
 
 class ProjectCards extends React.Component {
   static propTypes = {
     project: projectShape.projectShape,
+    updateProject: PropTypes.func.isRequired,
   }
 
   state = {
@@ -23,12 +25,11 @@ class ProjectCards extends React.Component {
       .catch((err) => console.error('get patterns failed', err));
   }
 
-  statusChangeEvent = (e) => this.setState({ status: e.target.value });
-
-  componentDidUpdate() {
-    if (this.props.onChange) {
-      this.props.onChange(this.state);
-    }
+  statusChangeEvent = (e) => {
+    const { project, updateProject } = this.props;
+    // const editedProject = { ...project }; // this is making a copy of the project with all of the same keys, not 100% sure this is necessary
+    project.status = e.target.value;
+    updateProject(project);
   }
 
   render() {
@@ -49,7 +50,7 @@ class ProjectCards extends React.Component {
           </select>
           </div>
         </div>
-        <Link to={`/single/${project.id}`} className="btn btn-dark m-1">See Full Project Details</Link>
+        <Link to={`/single/${project.id}`} className="btn btn-secondary rounded-0 m-1">See Full Project Details</Link>
       </div>
     );
   }

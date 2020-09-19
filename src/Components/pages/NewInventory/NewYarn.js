@@ -116,7 +116,7 @@ class NewYarn extends React.Component {
                 onChange={this.changeNotesEvent}
                 />
             </div>
-          <button className="btn btn-warning" onClick={this.saveYarns}>Save Yarn</button>
+          <button className="btn btn-secondary rounded-0" onClick={this.saveYarns}>Save Yarn</button>
         </form>
       </div>
     );

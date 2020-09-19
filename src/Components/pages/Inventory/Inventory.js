@@ -5,6 +5,7 @@ import YarnCards from '../../shared/YarnCards/YarnCards';
 import authData from '../../../helpers/data/authData';
 import needlesData from '../../../helpers/data/needlesData';
 import yarnsData from '../../../helpers/data/yarnsData';
+import './Inventory.scss';
 
 class Inventory extends React.Component {
   state = {
@@ -54,18 +55,18 @@ class Inventory extends React.Component {
     return (
       <div className="Inventory">
         <h1>Inventory</h1>
-        <div className="needles">
-        <h2>Needles</h2>
-        <Link to="/new/needles" className="btn btn-light m-1">Add New Needles</Link>
-        <div className="container">
-        <div className="row">
-          { needleCards }
-        </div>
-        </div>
+          <div className="needles">
+            <h2>Needles</h2>
+              <Link to="/new/needles" className="btn btn-light rounded-0 m-1">Add New Needles</Link>
+            <div className="container">
+              <div className="row">
+                { needleCards }
+              </div>
+            </div>
         </div>
         <div id="invYarn" className="yarns">
         <h2>Yarns</h2>
-        <Link to="/new/yarn" className="btn btn-light m-1">Add New Yarn</Link>
+        <Link to="/new/yarn" className="btn btn-light rounded-0 m-1">Add New Yarn</Link>
         <div className="container">
         <div className="row">
           { yarnCards }

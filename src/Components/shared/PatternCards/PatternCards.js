@@ -36,8 +36,8 @@ class PatternCards extends React.Component {
         <li className="list-group-item"><a href={pattern.patternUrl}>Take me to the pattern!</a></li>
       </ul>
       <div className="card-body">
-          <Link to={`/create/${pattern.id}`} className="btn btn-dark m-1">Start Knitting</Link>
-          <button className="btn btn-dark m-1" onClick={this.deletePatternsEvent}>Delete Pattern</button>
+          <Link to={`/create/${pattern.id}`} className="btn btn-secondary rounded-0 m-1">Start Knitting</Link>
+          <button className="btn btn-secondary rounded-0 m-1" onClick={this.deletePatternsEvent}>Delete Pattern</button>
         </div>
     </div>
     );

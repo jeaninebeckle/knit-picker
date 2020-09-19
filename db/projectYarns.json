@@ -1,0 +1,10 @@
+{
+  "projectYarn1": {
+    "foodId": "food4",
+    "projectId": "flight1"
+  },
+  "projectYarn2": {
+    "foodId": "food6",
+    "flightId": "flight1"
+  }
+}

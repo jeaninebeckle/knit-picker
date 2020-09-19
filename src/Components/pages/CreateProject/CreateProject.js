@@ -84,9 +84,9 @@ class CreateProject extends React.Component {
         </div>
         <div className="buttons col-md">
         <h3>Links</h3>
-          <button className="btn btn-light" onClick={this.saveProject}>Let's Get Started!</button>
-          <a className="btn btn-light" href="https://www.amazon.com" target="blank"><i className="fab fa-amazon"></i> Buy Supplies</a>
-          <Link to={'/patterns'} className="btn btn-light">Return to Patterns</Link>
+          <button className="btn btn-light rounded-0" onClick={this.saveProject}>Let's Get Started!</button>
+          <a className="btn btn-light rounded-0" href="https://www.amazon.com" target="blank"><i className="fab fa-amazon"></i> Buy Supplies</a>
+          <Link to={'/patterns'} className="btn btn-light rounded-0">Return to Patterns</Link>
         </div>
         <div className="yarn col-md">
         <h3>Yarn</h3>
