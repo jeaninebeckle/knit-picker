@@ -57,18 +57,22 @@ class Inventory extends React.Component {
         <div className="needles">
         <h2>Needles</h2>
         <Link to="/new/needles" className="btn btn-light m-1">Add New Needles</Link>
-        <div className="card-columns m-3">
+        <div className="container">
+        <div className="row">
           { needleCards }
+        </div>
         </div>
         </div>
         <div id="invYarn" className="yarns">
         <h2>Yarns</h2>
         <Link to="/new/yarn" className="btn btn-light m-1">Add New Yarn</Link>
-        <div className="card-columns m-3">
+        <div className="container">
+        <div className="row">
           { yarnCards }
         </div>
         </div>
-      </div>
+        </div>
+        </div>
     );
   }
 }

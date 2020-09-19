@@ -10,6 +10,7 @@ class ProjectCards extends React.Component {
 
   state = {
     pattern: {},
+    status: '',
   }
 
   componentDidMount() {
@@ -22,9 +23,12 @@ class ProjectCards extends React.Component {
       .catch((err) => console.error('get patterns failed', err));
   }
 
-  statusChangeEvent = (e) => {
-    e.preventDefault();
-    this.setState({ status: e.target.value });
+  statusChangeEvent = (e) => this.setState({ status: e.target.value });
+
+  componentDidUpdate() {
+    if (this.props.onChange) {
+      this.props.onChange(this.state);
+    }
   }
 
   render() {
@@ -32,7 +36,7 @@ class ProjectCards extends React.Component {
     const { project } = this.props;
 
     const statuses = ['Saved for Later', 'Completed', 'In Progress'];
-    const dropdown = statuses.map((status) => <option value={status}>{status}</option>);
+    const dropdown = statuses.map((status, index) => <option value={status} key={index}>{status}</option>);
 
     return (
       <div className="card">
