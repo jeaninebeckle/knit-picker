@@ -20,7 +20,7 @@ class YarnCards extends React.Component {
     const { yarn } = this.props;
 
     return (
-        <div className="card">
+        <div className="card yarnCard">
           <div className="card-header text-center">
             Yarn color: {yarn.color}
           </div>
@@ -31,8 +31,8 @@ class YarnCards extends React.Component {
             <li className="list-group-item notes">Notes: {yarn.notes}</li>
           </ul>
           <div className="text-center">
-          <Link to={`/yarn/${yarn.id}/edit`} className="btn btn-secondary inventory rounded-0 m-1">Edit</Link>
-          <button className="btn btn-secondary inventory rounded-0 m-1" onClick={this.deleteYarnsEvent}>Delete</button>
+          <Link to={`/yarn/${yarn.id}/edit`} className="btn btn-secondary inventory m-1">Edit</Link>
+          <button className="btn btn-secondary inventory m-1" onClick={this.deleteYarnsEvent}>Delete</button>
           </div>
         </div>
     );

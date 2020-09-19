@@ -1,5 +1,6 @@
 import React from 'react';
 import yarnShape from '../../../helpers/props/yarnShape';
+import './ProjYarn.scss';
 
 class ProjYarnCards extends React.Component {
   static propTypes = {
@@ -10,7 +11,7 @@ class ProjYarnCards extends React.Component {
     const { yarn } = this.props;
 
     return (
-        <div className="card">
+        <div className="card projYarn">
           <div className="card-header">
             {yarn.color}
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import patternShape from '../../../helpers/props/patternShape';
-import './PatternCards.scss';
+import './ProjPattern.scss';
 
 class ProjPatternCards extends React.Component {
   static propTypes = {
@@ -11,7 +11,7 @@ class ProjPatternCards extends React.Component {
     const { pattern } = this.props;
 
     return (
-      <div className="card">
+      <div className="card projPattern">
       <img className="card-img-top" src={pattern.imageUrl} alt="Card cap" />
       <div className="card-body">
         <h5 className="card-title">{pattern.patternName}</h5>

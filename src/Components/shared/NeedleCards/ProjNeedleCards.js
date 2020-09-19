@@ -11,7 +11,7 @@ class ProjNeedleCards extends React.Component {
     const { needle } = this.props;
 
     return (
-        <div className="card">
+        <div className="card projNeedleCard">
           <div className="card-header font-weight-bold">
             Size {needle.size}
           </div>

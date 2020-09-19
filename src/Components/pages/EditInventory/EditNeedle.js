@@ -115,7 +115,7 @@ class EditNeedle extends React.Component {
                 onChange={this.changeNotesEvent}
                 />
             </div>
-          <button className="btn btn-secondary rounded-0" onClick={this.updateNeedles}>Save Changes</button>
+          <button className="btn btn-secondary" onClick={this.updateNeedles}>Save Changes</button>
         </form>
       </div>
     );

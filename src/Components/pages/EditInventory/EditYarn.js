@@ -133,7 +133,7 @@ class EditYarn extends React.Component {
                 onChange={this.changeNotesEvent}
                 />
             </div>
-          <button className="btn btn-secondary rounded-0" onClick={this.updateYarns}>Save Changes</button>
+          <button className="btn btn-secondary" onClick={this.updateYarns}>Save Changes</button>
         </form>
       </div>
     );

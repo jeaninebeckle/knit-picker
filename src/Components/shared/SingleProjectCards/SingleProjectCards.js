@@ -12,7 +12,7 @@ class SingleProjectCards extends React.Component {
     const { project, pattern } = this.props;
 
     return (
-      <div className="card">
+      <div className="card single">
         <img className="card-img-top" src={pattern.imageUrl} alt="Card cap" />
         <div className="card-body">
           <h5 className="card-title">{pattern.patternName}</h5>
@@ -27,7 +27,7 @@ class SingleProjectCards extends React.Component {
               <li className="list-group-item">Amount of yarn: {pattern.yarnWeight} grams</li>
               <li className="list-group-item">Notes: {pattern.notes}</li>
             </ul>
-            <button className="btn btn-secondary rounded-0"><a href={pattern.patternUrl}>Get the pattern here</a></button>
+            <button className="btn btn-secondary"><a href={pattern.patternUrl}>Get the pattern here</a></button>
           </div>
         </div>
       </div>
