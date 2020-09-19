@@ -19,7 +19,7 @@ class NeedleCards extends React.Component {
     const { needle } = this.props;
 
     return (
-        <div className="card">
+        <div className="card needleCard">
           <div className="card-header font-weight-bold">
             Size {needle.size}
           </div>
@@ -29,8 +29,8 @@ class NeedleCards extends React.Component {
             <li className="list-group-item">Notes: {needle.notes}</li>
           </ul>
           <div>
-          <Link to={`/needle/${needle.id}/edit`} className="btn btn-secondary rounded-0 m-1 inventory">Edit</Link>
-          <button className="btn btn-secondary rounded-0 m-1 inventory" onClick={this.deleteNeedlesEvent}>Delete</button>
+          <Link to={`/needle/${needle.id}/edit`} className="btn btn-secondary m-1 inventory">Edit</Link>
+          <button className="btn btn-secondary m-1 inventory" onClick={this.deleteNeedlesEvent}>Delete</button>
           </div>
         </div>
     );

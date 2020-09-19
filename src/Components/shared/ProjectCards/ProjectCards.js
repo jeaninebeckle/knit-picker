@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import patternsData from '../../../helpers/data/patternsData';
 import projectShape from '../../../helpers/props/projectShape';
+import './ProjectCards.scss';
 
 class ProjectCards extends React.Component {
   static propTypes = {
@@ -27,7 +28,6 @@ class ProjectCards extends React.Component {
 
   statusChangeEvent = (e) => {
     const { project, updateProject } = this.props;
-    // const editedProject = { ...project }; // this is making a copy of the project with all of the same keys, not 100% sure this is necessary
     project.status = e.target.value;
     updateProject(project);
   }
@@ -40,17 +40,17 @@ class ProjectCards extends React.Component {
     const dropdown = statuses.map((status, index) => <option value={status} key={index}>{status}</option>);
 
     return (
-      <div className="card">
-        <img className="card-img-top" src={pattern.imageUrl} alt="Card cap" />
+      <div className="card projectCard">
+        <img className="card-img-top projectImg" src={pattern.imageUrl} alt="Card cap" />
         <div className="card-body">
           <h5 className="card-title">{pattern.patternName}</h5>
           <div>
-          <select value={project.status} onChange={this.statusChangeEvent}>
+          <select className="selector" value={project.status} onChange={this.statusChangeEvent}>
               {dropdown}
           </select>
           </div>
         </div>
-        <Link to={`/single/${project.id}`} className="btn btn-secondary rounded-0 m-1">See Full Project Details</Link>
+        <Link to={`/single/${project.id}`} className="btn btn-secondary m-1">See Full Project Details</Link>
       </div>
     );
   }

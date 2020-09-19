@@ -201,7 +201,7 @@ class NewPatterns extends React.Component {
                 onChange={this.changeNotesEvent}
                 />
             </div>
-          <button className="btn btn-secondary rounded-0" onClick={this.savePatterns}>Save New Pattern</button>
+          <button className="btn btn-secondary" onClick={this.savePatterns}>Save New Pattern</button>
         </form>
       </div>
     );

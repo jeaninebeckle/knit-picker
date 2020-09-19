@@ -4,6 +4,7 @@ import patternsData from '../../../helpers/data/patternsData';
 import projectsData from '../../../helpers/data/projectsData';
 import patternShape from '../../../helpers/props/patternShape';
 import SingleProjectCards from '../../shared/SingleProjectCards/SingleProjectCards';
+import './SingleProject.scss';
 
 class SingleProject extends React.Component {
   static propTypes = {
@@ -44,10 +45,10 @@ class SingleProject extends React.Component {
     return (
       <div className="SingleProject">
         <h1>{pattern.patternName} Project</h1>
-        <div className="card-columns">
+        <div className="container">
           <SingleProjectCards project={project} pattern={pattern}/>
         </div>
-        <Link to={'/projects'} className="btn btn-secondary rounded-0 m-1">Return to all projects</Link>
+        <Link to={'/projects'} className="btn btn-secondary m-1">Return to all projects</Link>
       </div>
     );
   }

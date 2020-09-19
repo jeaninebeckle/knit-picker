@@ -1,9 +1,15 @@
-.patternImg {
+.projectImg {
   object-fit: cover;
   height: 600px;
 }
 
-.patternCard {
+.projectCard {
   margin-right: 40px;
+  width: 500px !important;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.selector {
+  background-color: #74716e;
+  color: white
 }
