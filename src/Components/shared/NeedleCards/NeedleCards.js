@@ -20,7 +20,7 @@ class NeedleCards extends React.Component {
 
     return (
         <div className="card">
-          <div className="card-header">
+          <div className="card-header font-weight-bold">
             Size {needle.size}
           </div>
           <ul className="list-group list-group-flush">
@@ -28,8 +28,10 @@ class NeedleCards extends React.Component {
             <li className="list-group-item">Needle Length: {needle.length}</li>
             <li className="list-group-item">Notes: {needle.notes}</li>
           </ul>
-          <button className="btn btn-dark m-1" onClick={this.deleteNeedlesEvent}>Delete</button>
-          <Link to={`/needle/${needle.id}/edit`} className="btn btn-dark m-1">Edit</Link>
+          <div>
+          <Link to={`/needle/${needle.id}/edit`} className="btn btn-secondary rounded-0 m-1 inventory">Edit</Link>
+          <button className="btn btn-secondary rounded-0 m-1 inventory" onClick={this.deleteNeedlesEvent}>Delete</button>
+          </div>
         </div>
     );
   }

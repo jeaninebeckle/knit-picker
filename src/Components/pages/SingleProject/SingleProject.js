@@ -47,7 +47,7 @@ class SingleProject extends React.Component {
         <div className="card-columns">
           <SingleProjectCards project={project} pattern={pattern}/>
         </div>
-        <Link to={'/projects'} className="btn btn-dark m-1">Return to all projects</Link>
+        <Link to={'/projects'} className="btn btn-secondary rounded-0 m-1">Return to all projects</Link>
       </div>
     );
   }

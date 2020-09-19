@@ -20,9 +20,12 @@ const getSingleProject = (projectId) => axios.get(`${baseUrl}/projects/${project
 
 const createProject = (newProject) => axios.post(`${baseUrl}/projects.json`, newProject);
 
+const updateProject = (projectId, updatedProject) => axios.put(`${baseUrl}/projects/${projectId}.json`, updatedProject);
+
 export default {
   getProjectsByUid,
   getSingleProject,
   getProjectsByPatternId,
   createProject,
+  updateProject,
 };

@@ -35,7 +35,7 @@ class Patterns extends React.Component {
     return (
       <div className="Patterns">
         <h1>Patterns</h1>
-        <Link to="/new/patterns" className="btn btn-light m-1">Add A New Pattern</Link>
+        <Link to="/new/patterns" className="btn btn-light rounded-0 m-1">Add A New Pattern</Link>
         <div className="card-columns m-3">
           { patternCards }
         </div>

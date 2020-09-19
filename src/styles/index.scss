@@ -7,6 +7,7 @@
 
 body {
   background-color: $favColor;
+  color: #74716e;
 }
 
 h1, h2, h3 {
@@ -31,4 +32,18 @@ a {
 .navIcon {
   width: 50%;
   height: 50%;
+}
+
+.btn-secondary {
+  background-color: #74716e;
+  display: inline-block;
+        padding: 6px 25px;
+        box-shadow: inset 0 0 0 3px #fff;
+                    
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  opacity: .75;
+  transition: .4s ease;
 }

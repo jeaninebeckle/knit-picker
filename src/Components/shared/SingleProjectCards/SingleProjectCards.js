@@ -27,7 +27,7 @@ class SingleProjectCards extends React.Component {
               <li className="list-group-item">Amount of yarn: {pattern.yarnWeight} grams</li>
               <li className="list-group-item">Notes: {pattern.notes}</li>
             </ul>
-            <button className="btn btn-dark"><a href={pattern.patternUrl}>Get the pattern here</a></button>
+            <button className="btn btn-secondary rounded-0"><a href={pattern.patternUrl}>Get the pattern here</a></button>
           </div>
         </div>
       </div>

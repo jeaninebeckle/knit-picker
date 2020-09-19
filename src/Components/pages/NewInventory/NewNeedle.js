@@ -100,7 +100,7 @@ class NewNeedle extends React.Component {
                 onChange={this.changeNotesEvent}
                 />
             </div>
-          <button className="btn btn-warning" onClick={this.saveNeedles}>Save Needles</button>
+          <button className="btn btn-secondary rounded-0" onClick={this.saveNeedles}>Save Needles</button>
         </form>
       </div>
     );
