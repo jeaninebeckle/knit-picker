@@ -13,9 +13,10 @@ class Auth extends React.Component {
   render() {
     return (
       <div className="Auth">
-        <h1 className="h1Auth">Welcome To Knit Picker!</h1>
-        <h3 className="h3Auth">a place to organize all of your knitting needs</h3>
-        <button className="btn btn-outline-light authbtn m-3" onClick={this.loginClickEvent}>Log in to get started</button>
+      <div className="container-fluid">
+      <img className="auth-img" src="https://i.imgur.com/7N3tsYl.jpg" alt="home" />
+      </div>
+      <button className="btn btn-light authbtn m-3" onClick={this.loginClickEvent}>Please log in to get started</button>
       </div>
     );
   }
