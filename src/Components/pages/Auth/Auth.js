@@ -14,7 +14,7 @@ class Auth extends React.Component {
     return (
       <div className="Auth">
       <div className="container-fluid">
-      <img className="auth-img" src="https://i.imgur.com/7N3tsYl.jpg" alt="home" />
+      <img className="auth-img" src="https://i.imgur.com/q0e0yqJ.jpg" alt="home" />
       </div>
       <button className="btn btn-light authbtn m-3" onClick={this.loginClickEvent}>Please log in to get started</button>
       </div>
