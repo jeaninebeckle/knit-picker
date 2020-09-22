@@ -29,7 +29,7 @@ class PatternCards extends React.Component {
         <li className="list-group-item">Needle Details: {pattern.needleDetails}</li>
         <li className="list-group-item">Yarn Details: {pattern.yarnDetails}</li>
         <li className="list-group-item">Notes: {pattern.notes}</li>
-        <li className="list-group-item"><a href={pattern.patternUrl}>Click me for the pattern!</a></li>
+        <li className="list-group-item"><a href={pattern.patternUrl} target="blank">Click me for the pattern!</a></li>
       </ul>
       <div className="card-body">
           <Link to={`/create/${pattern.id}`} className="btn btn-secondary m-1">Start Knitting</Link>
