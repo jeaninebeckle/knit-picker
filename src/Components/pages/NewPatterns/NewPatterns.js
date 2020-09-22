@@ -6,12 +6,8 @@ import patternsData from '../../../helpers/data/patternsData';
 class NewPatterns extends React.Component {
   state = {
     patternName: '',
-    needleSize: '',
-    needleType: '',
-    needleLength: '',
-    yarnColor: '',
-    yarnType: '',
-    yarnWeight: '',
+    needleDetails: '',
+    yarnDetails: '',
     imageUrl: '',
     patternUrl: '',
     notes: '',
@@ -22,34 +18,14 @@ class NewPatterns extends React.Component {
     this.setState({ patternName: e.target.value });
   }
 
-  changeNeedleSizeEvent = (e) => {
+  changeNeedleDetailsEvent = (e) => {
     e.preventDefault();
-    this.setState({ needleSize: e.target.value });
+    this.setState({ needleDetails: e.target.value });
   }
 
-  changeNeedleTypeEvent = (e) => {
+  changeYarnDetailsEvent = (e) => {
     e.preventDefault();
-    this.setState({ needleType: e.target.value });
-  }
-
-  changeNeedleLengthEvent = (e) => {
-    e.preventDefault();
-    this.setState({ needleLength: e.target.value });
-  }
-
-  changeYarnColorEvent = (e) => {
-    e.preventDefault();
-    this.setState({ yarnColor: e.target.value });
-  }
-
-  changeYarnTypeEvent = (e) => {
-    e.preventDefault();
-    this.setState({ yarnType: e.target.value });
-  }
-
-  changeYarnWeightEvent = (e) => {
-    e.preventDefault();
-    this.setState({ yarnWeight: e.target.value });
+    this.setState({ yarnDetails: e.target.value });
   }
 
   changeImageUrlEvent = (e) => {
@@ -72,12 +48,8 @@ class NewPatterns extends React.Component {
 
     const keysIWant = [
       'patternName',
-      'needleSize',
-      'needleType',
-      'needleLength',
-      'yarnColor',
-      'yarnType',
-      'yarnWeight',
+      'needleDetails',
+      'yarnDetails',
       'imageUrl',
       'patternUrl',
       'notes',
@@ -95,16 +67,13 @@ class NewPatterns extends React.Component {
   render() {
     const {
       patternName,
-      needleSize,
-      needleType,
-      needleLength,
-      yarnColor,
-      yarnType,
-      yarnWeight,
+      needleDetails,
+      yarnDetails,
       imageUrl,
       patternUrl,
       notes,
     } = this.state;
+
     return (
       <div className="NewNeedle">
         <h2>Woohoo! New Pattern!</h2>
@@ -119,59 +88,23 @@ class NewPatterns extends React.Component {
                 value={patternName}
                 onChange={this.changePatternNameEvent}
                 />
-            <label htmlFor="">Required Needle Size</label>
+            <label htmlFor="">Needle Details</label>
               <input
                 type="text"
                 className="form-control"
                 id="needleSize"
-                placeholder="10"
-                value={needleSize}
-                onChange={this.changeNeedleSizeEvent}
+                placeholder="size 10, circular, 16 inches"
+                value={needleDetails}
+                onChange={this.changeNeedleDetailsEvent}
                 />
-            <label htmlFor="">Required Needle Type</label>
-              <input
-                type="text"
-                className="form-control"
-                id="needleType"
-                placeholder="circular"
-                value={needleType}
-                onChange={this.changeNeedleTypeEvent}
-                />
-            <label htmlFor="">Required Needle Length</label>
-              <input
-                type="text"
-                className="form-control"
-                id="needleLength"
-                placeholder="16 inches"
-                value={needleLength}
-                onChange={this.changeNeedleLengthEvent}
-                />
-            <label htmlFor="">Preferred Yarn Color</label>
+            <label htmlFor="">Yarn Details</label>
               <input
                 type="text"
                 className="form-control"
                 id="yarnColor"
-                placeholder="blue"
-                value={yarnColor}
-                onChange={this.changeYarnColorEvent}
-                />
-            <label htmlFor="">Required Yarn Type</label>
-              <input
-                type="text"
-                className="form-control"
-                id="yarnType"
-                placeholder="bulky"
-                value={yarnType}
-                onChange={this.changeYarnTypeEvent}
-                />
-            <label htmlFor="">Weight (in grams)</label>
-              <input
-                type="text"
-                className="form-control"
-                id="yarnWeight"
-                placeholder="200"
-                value={yarnWeight}
-                onChange={this.changeYarnWeightEvent}
+                placeholder="blue, bulky weight, 350 grams"
+                value={yarnDetails}
+                onChange={this.changeYarnDetailsEvent}
                 />
             <label htmlFor="">Pattern Image</label>
               <input

@@ -26,14 +26,10 @@ class PatternCards extends React.Component {
         <h5 className="card-title">{pattern.patternName}</h5>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">Needle size: {pattern.needleSize}</li>
-        <li className="list-group-item">Needle type: {pattern.needleType}</li>
-        <li className="list-group-item">Needle length: {pattern.needleLength}</li>
-        <li className="list-group-item">Yarn color: {pattern.yarnColor}</li>
-        <li className="list-group-item">Yarn type: {pattern.yarnType}</li>
-        <li className="list-group-item">Amount of yarn: {pattern.yarnWeight} grams</li>
+        <li className="list-group-item">Needle Details: {pattern.needleDetails}</li>
+        <li className="list-group-item">Yarn Details: {pattern.yarnDetails}</li>
         <li className="list-group-item">Notes: {pattern.notes}</li>
-        <li className="list-group-item"><a href={pattern.patternUrl}>Take me to the pattern!</a></li>
+        <li className="list-group-item"><a href={pattern.patternUrl}>Click me for the pattern!</a></li>
       </ul>
       <div className="card-body">
           <Link to={`/create/${pattern.id}`} className="btn btn-secondary m-1">Start Knitting</Link>

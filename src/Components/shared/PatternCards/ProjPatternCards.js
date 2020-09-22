@@ -17,12 +17,8 @@ class ProjPatternCards extends React.Component {
         <h5 className="card-title">{pattern.patternName}</h5>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">Needle size: {pattern.needleSize}</li>
-        <li className="list-group-item">Needle type: {pattern.needleType}</li>
-        <li className="list-group-item">Needle length: {pattern.needleLength}</li>
-        <li className="list-group-item">Yarn color: {pattern.yarnColor}</li>
-        <li className="list-group-item">Yarn type: {pattern.yarnType}</li>
-        <li className="list-group-item">Amount of yarn: {pattern.yarnWeight} grams</li>
+        <li className="list-group-item">Needle Details: {pattern.needleDetails}</li>
+        <li className="list-group-item">Yarn Details: {pattern.yarnDetails}</li>
         <li className="list-group-item">Notes: {pattern.notes}</li>
       </ul>
     </div>

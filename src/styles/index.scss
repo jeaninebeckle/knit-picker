@@ -50,8 +50,13 @@ a {
                     
 }
 
-.btn-secondary:hover {
+.btn-outline-secondary:hover {
   background-color: white;
   opacity: .75;
   transition: .4s ease;
+}
+
+.btn-outline-secondary {
+  color: #74716e !important;
+  border: #74716e 1px solid !important;
 }
