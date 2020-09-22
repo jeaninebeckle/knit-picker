@@ -1,8 +1,8 @@
 import React from 'react';
-// import { storage } from 'firebase';
-// import React, { useState } from 'react';
 import firebase from 'firebase/app';
-// import { render } from 'react-dom';
+import authData from '../../../helpers/data/authData';
+import ImageCards from '../../shared/ImageCards/ImageCards';
+import imageData from '../../../helpers/data/imageData';
 import connection from '../../../helpers/data/connection';
 import 'firebase/storage';
 
@@ -10,6 +10,7 @@ connection();
 
 class Gallery extends React.Component {
     state = {
+      images: [],
       image: null,
       url: '',
     };
@@ -21,30 +22,39 @@ class Gallery extends React.Component {
     }
   };
 
-  handleUpload = () => {
-    const { image } = this.state;
-    const uploadTask = firebase.storage().ref(`images/${image.name}`).put(image);
-    uploadTask.on(
-      'state_changed',
-      (snapshot) => {},
-      (error) => {
-        console.warn(error);
-      },
-      () => {
-        firebase.storage()
-          .ref('images')
-          .child(image.name)
-          .getDownloadURL()
-          .then((url) => {
-            this.setState({ url });
-          });
-      },
-    );
+  handleUpload = (e) => {
+    const ref = firebase.storage().ref(`images/${this.state.image.name}`);
+
+    e.preventDefault();
+    const newImage = {
+      imageUrl: '',
+      uid: authData.getUid(),
+    };
+    ref.put(this.state.image).then(() => {
+      ref.getDownloadURL().then((url) => {
+        newImage.imageUrl = url;
+        imageData.createImage(newImage).then(() => {
+          this.getImages();
+        });
+      });
+    })
+      .catch((err) => console.error('could not add image', err));
   };
 
-  render() {
-    const storageRef = firebase.storage.ref(`images/${image.name}`);
+  getImages = () => {
+    imageData.getImagesByUid(authData.getUid())
+      .then((images) => this.setState({ images }))
+      .catch((err) => console.error('get images broke', err));
+  }
 
+  componentDidMount() {
+    this.getImages();
+  }
+
+  render() {
+    const { images } = this.state;
+
+    const imageCards = images.map((image) => <ImageCards key={image.id} image={image} />);
     return (
       <div className="center">
           <br/>
@@ -65,6 +75,7 @@ class Gallery extends React.Component {
         </div>
         <button onClick={this.handleUpload}>Upload</button>
         <img src={this.state.url} alt="knitting"/>
+        { imageCards }
       </div>
     );
   }
