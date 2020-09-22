@@ -56,7 +56,7 @@ class Inventory extends React.Component {
       <div className="Inventory">
         <h1>Inventory</h1>
           <div className="needles">
-            <h2>Needles</h2>
+            <h2 className="h2Needles">Needles</h2>
               <Link to="/new/needles" className="btn btn-secondary m-1">Add New Needles</Link>
             <div className="container">
               <div className="row">
@@ -65,7 +65,7 @@ class Inventory extends React.Component {
             </div>
         </div>
         <div id="invYarn" className="yarns">
-        <h2>Yarns</h2>
+        <h2 className="h2Yarns">Yarns</h2>
         <Link to="/new/yarn" className="btn btn-secondary m-1">Add New Yarn</Link>
         <div className="container">
         <div className="row">
