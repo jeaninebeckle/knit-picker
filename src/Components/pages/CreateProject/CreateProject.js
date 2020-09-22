@@ -77,6 +77,7 @@ class CreateProject extends React.Component {
     return (
       <div className="CreateProject">
         <h1>Start A New Project</h1>
+        <h2 className="ready">Do you have everything you need?</h2>
         <div className="row">
         <div className="pattern col-md">
           <h3>Pattern</h3>
@@ -84,7 +85,7 @@ class CreateProject extends React.Component {
         </div>
         <div className="buttons col-md">
         <h3>Links</h3>
-          <button className="btn btn-secondary" onClick={this.saveProject}>Let's Get Started!</button>
+          <button className="btn btn-secondary" onClick={this.saveProject}>Let's Go!</button>
           <a className="btn btn-secondary" href="https://www.amazon.com" target="blank"><i className="fab fa-amazon"></i> Buy Supplies</a>
           <Link to={'/patterns'} className="btn btn-secondary">Return to Patterns</Link>
         </div>
