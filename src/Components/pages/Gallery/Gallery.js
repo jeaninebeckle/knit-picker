@@ -56,26 +56,20 @@ class Gallery extends React.Component {
 
     const imageCards = images.map((image) => <ImageCards key={image.id} image={image} />);
     return (
-      <div className="center">
+      <div className="gallery container">
           <br/>
-          <h2>Gallery</h2>
-          <br/>
-          <br/>
-        <br />
-        <br />
-        <br />
+          <h1>Gallery</h1>
+          <h3>Upload a new photo to your collection when you finish a project!</h3>
+          <div className="row">
+          { imageCards }
+          </div>
         <div className="file-field input-field">
           <div className="btn">
-            <span>File</span>
+            <span>File </span>
             <input type="file" onChange={this.handleChange} />
           </div>
-          <div className="file-path-wrapper">
-            <input className="file-path validate" type="text" />
-          </div>
         </div>
-        <button onClick={this.handleUpload}>Upload</button>
-        <img src={this.state.url} alt="knitting"/>
-        { imageCards }
+        <button className="btn btn-secondary" onClick={this.handleUpload}>Upload</button>
       </div>
     );
   }
