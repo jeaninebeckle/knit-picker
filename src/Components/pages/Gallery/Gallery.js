@@ -57,7 +57,6 @@ class Gallery extends React.Component {
     const imageCards = images.map((image) => <ImageCards key={image.id} image={image} />);
     return (
       <div className="gallery container">
-          <br/>
           <h1>Gallery</h1>
           <h3>Upload a new photo to your collection when you finish a project!</h3>
           <div className="row">
@@ -65,7 +64,6 @@ class Gallery extends React.Component {
           </div>
         <div className="file-field input-field">
           <div className="btn">
-            <span>File </span>
             <input type="file" onChange={this.handleChange} />
           </div>
         </div>
