@@ -12,8 +12,8 @@ class ProjYarnCards extends React.Component {
 
     return (
         <div className="card projYarn">
-          <div className="card-header">
-            {yarn.color}
+          <div className="card-header font-weight-bold">
+            Yarn color: {yarn.color}
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Yarn type: {yarn.type}</li>

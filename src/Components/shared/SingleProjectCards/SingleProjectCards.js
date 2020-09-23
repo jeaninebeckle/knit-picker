@@ -24,7 +24,7 @@ class SingleProjectCards extends React.Component {
               <li className="list-group-item">Yarn Details: {pattern.yarnDetails}</li>
               <li className="list-group-item">Notes: {pattern.notes}</li>
             </ul>
-            <button className="btn btn-secondary"><a href={pattern.patternUrl}>Get the pattern here</a></button>
+            <button className="btn btn-secondary"><a href={pattern.patternUrl} target="blank">Get the pattern here</a></button>
           </div>
         </div>
       </div>

@@ -78,22 +78,19 @@ class CreateProject extends React.Component {
       <div className="CreateProject">
         <h1>Start A New Project</h1>
         <h2 className="ready">Do you have everything you need?</h2>
+        <button className="btn btn-secondary" onClick={this.saveProject}>Ready to Go!</button>
+          <a className="btn btn-secondary" href="https://www.amazon.com" target="blank"><i className="fab fa-amazon"></i> Buy Supplies</a>
+          <Link to={'/patterns'} className="btn btn-secondary">Return to Patterns</Link>
         <div className="row">
-        <div className="pattern col-md">
+        <div className="pattern col-3">
           <h3>Pattern</h3>
         <ProjPatternCards pattern={pattern} />
         </div>
-        <div className="buttons col-md">
-        <h3>Links</h3>
-          <button className="btn btn-secondary" onClick={this.saveProject}>Ready to Go!</button>
-          <a className="btn btn-secondary" href="https://www.amazon.com" target="blank"><i className="fab fa-amazon"></i> Buy Supplies</a>
-          <Link to={'/patterns'} className="btn btn-secondary">Return to Patterns</Link>
-        </div>
-        <div className="yarn col-md">
+        <div className="yarn col-3">
         <h3>Yarn</h3>
           { yarnCards }
         </div>
-        <div className="needles col-md">
+        <div className="needles col-3">
         <h3>Needles</h3>
           { needleCards }
         </div>
