@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const patternShape = PropTypes.shape({
   patternName: PropTypes.string.isRequired,
-  item: PropTypes.string.isRequired,
+  item: PropTypes.string,
   needleDetails: PropTypes.string.isRequired,
   yarnDetails: PropTypes.string.isRequired,
   uid: PropTypes.string.isRequired,

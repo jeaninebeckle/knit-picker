@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import GalleryAlert from '../Alert/Alert';
 import {
   MDBContainer,
   MDBBtn,
@@ -11,6 +10,7 @@ import {
   MDBModalFooter,
 } from 'mdbreact';
 import patternsData from '../../../helpers/data/patternsData';
+import utils from '../../../helpers/utils';
 import projectShape from '../../../helpers/props/projectShape';
 import './ProjectCards.scss';
 
@@ -23,6 +23,7 @@ class ProjectCards extends React.Component {
   state = {
     pattern: {},
     status: '',
+    dateFinish: '',
     modal: false,
   }
 
@@ -39,11 +40,19 @@ class ProjectCards extends React.Component {
   statusChangeEvent = (e) => {
     const { project, updateProject } = this.props;
     project.status = e.target.value;
+    if (e.target.value === 'Completed') {
+      project.dateFinish = utils.getDate();
+    }
     updateProject(project);
     if (e.target.value === 'Completed') {
       this.toggle();
     }
   }
+
+  // finish = () => {
+  //   const { dateFinish } = this.state;
+  //   this.setState({ dateFinish: utils.getDate() });
+  // }
 
   toggle = () => {
     const { modal } = this.state;
@@ -66,6 +75,8 @@ class ProjectCards extends React.Component {
           <select className="selector" value={project.status} onChange={this.statusChangeEvent}>
               {dropdown}
           </select>
+          <p className="m-3">Date started: {project.dateStart}</p>
+          <p className="m-3">Date completed: {project.dateFinish}</p>
           </div>
         </div>
         <Link to={`/single/${project.id}`} className="btn btn-secondary m-1">See Full Project Details</Link>
