@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  MDBContainer,
+  MDBBtn,
+  MDBModal,
+  MDBModalBody,
+  MDBModalHeader,
+  MDBModalFooter,
+} from 'mdbreact';
 import PropTypes from 'prop-types';
-import Modal from '../GalleryModal/GalleryModal';
+// import Modal from '../GalleryModal/GalleryModal';
 import patternsData from '../../../helpers/data/patternsData';
 import utils from '../../../helpers/utils';
 import projectShape from '../../../helpers/props/projectShape';
@@ -17,6 +25,7 @@ class ProjectCards extends React.Component {
     pattern: {},
     status: '',
     dateFinish: '',
+    modal: false,
   }
 
   componentDidMount() {
@@ -29,6 +38,11 @@ class ProjectCards extends React.Component {
       .catch((err) => console.error('get patterns failed', err));
   }
 
+  toggle = () => {
+    const { modal } = this.state;
+    this.setState({ modal: !modal });
+  }
+
   statusChangeEvent = (e) => {
     const { project, updateProject } = this.props;
     project.status = e.target.value;
@@ -37,7 +51,7 @@ class ProjectCards extends React.Component {
     }
     updateProject(project);
     if (e.target.value === 'Completed') {
-      Modal.toggle();
+      this.toggle();
     }
   }
 
@@ -55,6 +69,19 @@ class ProjectCards extends React.Component {
 
     return (
       <div className="card projectCard">
+            <MDBContainer>
+    <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
+      <MDBModalHeader toggle={this.toggle}></MDBModalHeader>
+      <MDBModalBody>
+        <h3>Nice work!</h3>
+        <h4>Do you want to add a photo of your finished product to the gallery?</h4>
+      </MDBModalBody>
+      <MDBModalFooter>
+        <Link to={'/gallery'} className="btn btn-secondary">Yes! Let's go!</Link>
+        <MDBBtn color="secondary" onClick={this.toggle}>Maybe later</MDBBtn>
+      </MDBModalFooter>
+    </MDBModal>
+    </MDBContainer>
         <img className="card-img-top projectImg" src={pattern.imageUrl} alt="Card cap" />
         <div className="card-body">
           <h5 className="card-title">{pattern.patternName}</h5>
