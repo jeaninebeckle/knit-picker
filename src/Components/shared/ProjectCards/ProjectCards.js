@@ -1,14 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {
-  MDBContainer,
-  MDBBtn,
-  MDBModal,
-  MDBModalBody,
-  MDBModalHeader,
-  MDBModalFooter,
-} from 'mdbreact';
+import Modal from '../GalleryModal/GalleryModal';
 import patternsData from '../../../helpers/data/patternsData';
 import utils from '../../../helpers/utils';
 import projectShape from '../../../helpers/props/projectShape';
@@ -24,7 +17,6 @@ class ProjectCards extends React.Component {
     pattern: {},
     status: '',
     dateFinish: '',
-    modal: false,
   }
 
   componentDidMount() {
@@ -45,7 +37,7 @@ class ProjectCards extends React.Component {
     }
     updateProject(project);
     if (e.target.value === 'Completed') {
-      this.toggle();
+      Modal.toggle();
     }
   }
 
@@ -53,11 +45,6 @@ class ProjectCards extends React.Component {
   //   const { dateFinish } = this.state;
   //   this.setState({ dateFinish: utils.getDate() });
   // }
-
-  toggle = () => {
-    const { modal } = this.state;
-    this.setState({ modal: !modal });
-  }
 
   render() {
     const { pattern } = this.state;
@@ -80,19 +67,6 @@ class ProjectCards extends React.Component {
           </div>
         </div>
         <Link to={`/single/${project.id}`} className="btn btn-secondary m-1">See Full Project Details</Link>
-        <MDBContainer>
-      <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-        <MDBModalHeader toggle={this.toggle}></MDBModalHeader>
-        <MDBModalBody>
-          <h3>Nice work!</h3>
-          <h4>Do you want to add a photo of your finished product to the gallery?</h4>
-        </MDBModalBody>
-        <MDBModalFooter>
-          <Link to={'/gallery'} className="btn btn-secondary">Yes! Let's go!</Link>
-          <MDBBtn color="secondary" onClick={this.toggle}>Maybe later</MDBBtn>
-        </MDBModalFooter>
-      </MDBModal>
-    </MDBContainer>
       </div>
     );
   }
