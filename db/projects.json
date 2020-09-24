@@ -13,5 +13,15 @@
     "uid": "Qzzkx1vm6mZiVLH3GrKp50FrI713",
     "status": "In Progress",
     "patternId": "pattern2"
+  },
+  "project4": {
+    "uid": "lbPDt2nC9MU4zsgOXgqAYSTs45H3",
+    "status": "Saved for Later",
+    "patternId": "pattern7"
+  },
+  "project5": {
+    "uid": "lbPDt2nC9MU4zsgOXgqAYSTs45H3",
+    "status": "In Progress",
+    "patternId": "pattern9"
   }
 }

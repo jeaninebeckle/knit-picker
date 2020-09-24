@@ -52,5 +52,23 @@
     "isOwned": true,
     "material": "acrylic",
     "notes": "no label, why do I even have this?"
+  },
+  "yarn7": {
+    "color": "pale rose",
+    "type": "worsted",
+    "weight": 100,
+    "uid": "lbPDt2nC9MU4zsgOXgqAYSTs45H3",
+    "isOwned": true,
+    "material": "acrylic",
+    "notes": "recommends size 8 needles"
+  },
+  "yarn8": {
+    "color": "teal",
+    "type": "bulky",
+    "weight": 175,
+    "uid": "lbPDt2nC9MU4zsgOXgqAYSTs45H3",
+    "isOwned": true,
+    "material": "acrylic",
+    "notes": "recommends size 10 needles, very soft"
   }
 }

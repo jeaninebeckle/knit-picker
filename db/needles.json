@@ -118,5 +118,22 @@
     "uid": "Qzzkx1vm6mZiVLH3GrKp50FrI713",
     "isOwned": true,
     "notes": ""
+  },
+  "needle16": {
+    "size": 15,
+    "type": "circular",
+    "length": "16 inches",
+    "uid": "lbPDt2nC9MU4zsgOXgqAYSTs45H3",
+    "isOwned": true,
+    "notes": ""
+  },
+  "needle17": {
+    "size": 10,
+    "type": "straight",
+    "length": "14 inches",
+    "uid": "lbPDt2nC9MU4zsgOXgqAYSTs45H3",
+    "isOwned": true,
+    "notes": "hi mom!"
   }
+  
 }

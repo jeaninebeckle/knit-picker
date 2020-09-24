@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import _ from 'underscore';
+import utils from '../../../helpers/utils';
 import patternsData from '../../../helpers/data/patternsData';
 import projectsData from '../../../helpers/data/projectsData';
 import patternShape from '../../../helpers/props/patternShape';
@@ -58,6 +58,8 @@ class CreateProject extends React.Component {
     const newProject = {
       patternId: this.props.match.params.patternId,
       status: 'In Progress',
+      dateStart: utils.getDate(),
+      dateFinish: '',
       uid: authData.getUid(),
     };
 

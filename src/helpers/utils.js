@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const convertFirebaseCollection = (data) => {
   const objectCollection = data;
   const arrayCollection = [];
@@ -11,4 +13,6 @@ const convertFirebaseCollection = (data) => {
   return arrayCollection;
 };
 
-export default { convertFirebaseCollection };
+const getDate = () => moment().format('l');
+
+export default { convertFirebaseCollection, getDate };
