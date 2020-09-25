@@ -18,7 +18,7 @@ import './ProjectCards.scss';
 class ProjectCards extends React.Component {
   static propTypes = {
     project: projectShape.projectShape,
-    updateProject: PropTypes.func.isRequired,
+    deleteProject: PropTypes.func.isRequired,
   }
 
   state = {
@@ -55,10 +55,11 @@ class ProjectCards extends React.Component {
     }
   }
 
-  // finish = () => {
-  //   const { dateFinish } = this.state;
-  //   this.setState({ dateFinish: utils.getDate() });
-  // }
+  deleteProjectEvent = (e) => {
+    e.preventDefault();
+    const { project, deleteProject } = this.props;
+    deleteProject(project.id);
+  }
 
   render() {
     const { pattern } = this.state;
@@ -94,6 +95,7 @@ class ProjectCards extends React.Component {
           </div>
         </div>
         <Link to={`/single/${project.id}`} className="btn btn-secondary m-1">See Full Project Details</Link>
+        <div><button className="btn btn-secondary m-1" onClick={this.deleteProjectEvent}>Delete Project</button></div>
       </div>
     );
   }
