@@ -19,6 +19,14 @@ class Projects extends React.Component {
     this.getProjects();
   }
 
+  deleteProject = (projectId) => {
+    projectsData.deleteProject(projectId)
+      .then(() => {
+        this.getProjects();
+      })
+      .catch((err) => console.error('delete projects failed', err));
+  }
+
   updateProject = (project) => {
     projectsData
       .updateProject(project.id, project)
@@ -31,7 +39,7 @@ class Projects extends React.Component {
   render() {
     const { projects } = this.state;
 
-    const projectCards = projects.map((project) => <ProjectCards key={project.id} project={project} updateProject={this.updateProject}/>);
+    const projectCards = projects.map((project) => <ProjectCards key={project.id} project={project} updateProject={this.updateProject} deleteProject={this.deleteProject}/>);
 
     return (
       <div className="Projects">
