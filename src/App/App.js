@@ -20,6 +20,7 @@ import Gallery from '../Components/pages/Gallery/Gallery';
 import Patterns from '../Components/pages/Patterns/Patterns';
 import Projects from '../Components/pages/Projects/Projects';
 import NewPatterns from '../Components/pages/NewPatterns/NewPatterns';
+import EditPattern from '../Components/pages/EditPattern/EditPattern';
 import SingleProject from '../Components/pages/SingleProject/SingleProject';
 import CreateProject from '../Components/pages/CreateProject/CreateProject';
 
@@ -74,6 +75,7 @@ class App extends React.Component {
                <PrivateRoute path="/new/patterns" component={NewPatterns} authed={authed}/>
                <PrivateRoute path="/inventory" component={Inventory} authed={authed} />
                <PrivateRoute path="/projects" component={Projects} authed={authed} />
+               <PrivateRoute path="/edit/:patternId" component={EditPattern} authed={authed} />
                <PrivateRoute path="/create/:patternId" component={CreateProject} authed={authed} />
                <PrivateRoute path="/gallery" component={Gallery} authed={authed} />
                <PrivateRoute path="/patterns" component={Patterns} authed={authed} />

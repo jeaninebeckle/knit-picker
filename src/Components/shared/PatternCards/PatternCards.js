@@ -8,6 +8,7 @@ class PatternCards extends React.Component {
   static propTypes = {
     pattern: patternShape.patternShape,
     deletePatterns: PropTypes.func.isRequired,
+    updatePattern: PropTypes.func.isRequired,
   }
 
   deletePatternsEvent = (e) => {
@@ -33,7 +34,8 @@ class PatternCards extends React.Component {
       </ul>
       <div className="card-body">
           <Link to={`/create/${pattern.id}`} className="btn btn-secondary m-1">Start Knitting</Link>
-          <button className="btn btn-secondary m-1" onClick={this.deletePatternsEvent}>Delete Pattern</button>
+          <Link to={`/edit/${pattern.id}`} className="btn btn-secondary m-1">Edit</Link>
+          <button className="btn btn-secondary m-1" onClick={this.deletePatternsEvent}>Delete</button>
         </div>
     </div>
     );

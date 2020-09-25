@@ -16,9 +16,12 @@ const deletePatterns = (patternId) => axios.delete(`${baseUrl}/patterns/${patter
 
 const createPatterns = (newPattern) => axios.post(`${baseUrl}/patterns.json`, newPattern);
 
+const updatePatterns = (patternId, updatedPattern) => axios.put(`${baseUrl}/patterns/${patternId}.json`, updatedPattern);
+
 export default {
   getPatternsByUid,
   getSinglePatterns,
   deletePatterns,
   createPatterns,
+  updatePatterns,
 };
