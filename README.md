@@ -1,7 +1,7 @@
 # Knit Picker 🧶
 
 ## Description
-This is my frontend capstone for Nashville Software School's Evening 12 Cohort! It's built with React and uses a Google Firebase database. It allows users to keep track of their knitting supplies, save patterns, easily compare their materials against pattern requirements when they decide to start knitting a pattern, keep track of knitting projects together in one place, and upload photos of finished projects to a gallery where they can see everything on disply.
+This is my frontend capstone for Nashville Software School's Evening 12 Cohort! It's built with React and uses a Google Firebase database. It allows users to keep track of their knitting supplies, save patterns, easily compare their materials against pattern requirements when they decide to start knitting a pattern, keep track of knitting projects together in one place, and upload photos of finished projects to a gallery where they can see everything on display.
 
 ### Feature List
 * Built using React 
